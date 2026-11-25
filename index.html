@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>La laïcité : 120 ans de la loi de 1905, trois piliers, un regard depuis Beyrouth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Projet pour l'appel à projets AEFE 2026 « Valeurs de l'EFE et laïcité » : trois piliers, trois contresens, cinq dates, et une lecture depuis Beyrouth. Lycée franco-libanais de Verdun.">
+<meta property="og:title" content="La laïcité, en trois piliers">
+<meta property="og:description" content="La laïcité n’est pas une opinion parmi d’autres mais la liberté d’en avoir une.">
+<meta name="theme-color" content="#0a1736">
+<style>
+@font-face { font-family: "Silkscreen"; font-weight: 400; src: url(fonts/Silkscreen-400.ttf) format("truetype"); font-display: swap; }
+@font-face { font-family: "Silkscreen"; font-weight: 700; src: url(fonts/Silkscreen-700.ttf) format("truetype"); font-display: swap; }
+@font-face { font-family: "Archivo"; font-weight: 400; src: url(fonts/Archivo-400.ttf) format("truetype"); font-display: swap; }
+@font-face { font-family: "Archivo"; font-weight: 500; src: url(fonts/Archivo-500.ttf) format("truetype"); font-display: swap; }
+@font-face { font-family: "Archivo"; font-weight: 700; src: url(fonts/Archivo-700.ttf) format("truetype"); font-display: swap; }
+/* House style: the WebGL scroll one-pager (webgl-reel-site). One fixed stage, six plain text panels scrolled over it, one smoothed progress drives the camera and the dust. */
+:root {
+  color-scheme: dark;
+  --night: #0a1736;
+  --ice: #e8d6b0;       /* sand: accents */
+  --bone: #f6edd9;
+  --signal: #e5484d;    /* red of both flags: the 1905 date and the focus ring */
+  --cobalt: #2a4fa0;
+  --mute: #b9c1d8;
+  --display: "Silkscreen", "Courier New", monospace;
+  --text: "Archivo", "Segoe UI", system-ui, sans-serif;
+}
+html { background: var(--night); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--night); color: var(--bone); font-family: var(--text); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+#stage { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
+#fallback { position: fixed; inset: 0; z-index: 0; background: radial-gradient(60% 45% at 50% 40%, #1d3578 0%, var(--night) 70%); }
+main { position: relative; z-index: 1; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.panel { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); align-content: end; padding-block: 12svh 10svh; max-width: 1180px; margin: 0 auto; }
+.panel.mid { align-content: center; }
+#top { padding-block: 8svh 7svh; }
+h1, h2 { font-family: var(--display); font-weight: 700; line-height: 0.95; margin: 0; letter-spacing: 0; text-wrap: balance; overflow-wrap: anywhere; }
+h1 { font-size: clamp(44px, 11vw, 168px); text-shadow: 0 0 34px rgba(246,237,217,.22); }
+h2 { font-size: clamp(25px, 5.6vw, 78px); }
+p { margin: 0; max-width: 36ch; color: var(--bone); }
+.lede { font-size: clamp(18px, 2vw, 23px); font-stretch: 92%; margin-top: 22px; }
+.lede.quote { max-width: 30ch; font-weight: 500; }
+.quiet { color: var(--mute); font-size: 15px; margin-top: 16px; max-width: 46ch; }
+.quiet .src { display: block; margin-top: 6px; font-style: italic; color: var(--ice); }
+.plate { justify-self: start; background: #fff; border-radius: 14px; padding: 10px 14px; line-height: 0; margin-bottom: 22px; }
+.plate img { display: block; height: auto; max-width: 100%; }
+.plate.wide { margin: 28px 0 0; }
+.cue { font-family: var(--display); font-size: 13px; color: var(--mute); margin-top: 34px; }
+.list { display: grid; gap: 18px; margin: 30px 0 0; padding: 0; list-style: none; max-width: 40ch; }
+.list li { font-size: clamp(16px, 1.7vw, 19px); }
+.list b { display: block; font-family: var(--display); font-size: clamp(20px, 2.6vw, 30px); font-weight: 700; line-height: 1.05; margin-bottom: 4px; }
+.list b::before { content: "> "; color: var(--ice); }
+.dates { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 26px 22px; margin-top: 34px; max-width: 1100px; padding: 0; list-style: none; }
+.dates b { display: block; font-family: var(--display); font-size: clamp(24px, 2.6vw, 36px); line-height: 1; color: var(--ice); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dates .red b { color: var(--signal); }
+.dates span { display: block; margin-top: 8px; font-size: 15px; color: var(--mute); max-width: 24ch; }
+.dates strong { color: var(--bone); font-weight: 500; }
+.cta { justify-self: start; display: inline-block; margin-top: 30px; padding: 14px 22px; border: 1px solid var(--bone); color: var(--bone); text-decoration: none; font-family: var(--display); font-size: 16px; backdrop-filter: blur(6px); background: rgba(10,23,54,.4); }
+.cta:hover, .cta:focus-visible { background: var(--cobalt); border-color: var(--cobalt); outline: none; }
+.cta:focus-visible { box-shadow: 0 0 0 3px var(--signal); }
+.foot { font-family: var(--display); font-size: 13px; color: var(--mute); margin-top: 38px; max-width: 52ch; line-height: 1.6; }
+.right { justify-self: end; text-align: right; }
+.right p, .right .list { margin-left: auto; }
+.right .list b::before { content: ""; }
+.right .list b::after { content: " <"; color: var(--ice); }
+@media (max-width: 640px) {
+  .right { justify-self: start; text-align: left; }
+  .right p, .right .list { margin-left: 0; }
+  .right .list b::after { content: ""; }
+  .right .list b::before { content: "> "; }
+  .panel { padding-block: 10svh 8svh; }
+}
+</style>
+</head>
+<body>
+
+<div id="fallback" aria-hidden="true"></div>
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<main>
+  <section class="panel" id="top">
+    <div class="plate"><img src="img/lycee_logo.png" alt="Lycée franco-libanais Verdun" width="150" height="94"></div>
+    <h1>La<br>laïcité</h1>
+    <p class="lede quote">«&nbsp;La laïcité n’est pas une opinion parmi d’autres mais la liberté d’en avoir une.&nbsp;»</p>
+    <p class="quiet">Elle n’est pas une conviction mais le principe qui les autorise toutes. <span class="src">Observatoire de la laïcité</span></p>
+    <p class="cue">120 ans de la loi de 1905 · Faire défiler</p>
+  </section>
+
+  <section class="panel mid" id="piliers">
+    <h2>Trois piliers</h2>
+    <ul class="list">
+      <li><b>Liberté de conscience</b>Chacun croit, ne croit pas ou change de conviction, librement.</li>
+      <li><b>Neutralité de l'État</b>L'État ne favorise ni ne combat aucune croyance.</li>
+      <li><b>Égalité des droits</b>Mêmes droits pour tous, quelle que soit la croyance.</li>
+    </ul>
+  </section>
+
+  <section class="panel mid right" id="contresens">
+    <h2>Trois contresens</h2>
+    <ul class="list">
+      <li><b>Contre les religions</b>Non : elle protège aussi le droit de croire.</li>
+      <li><b>Une opinion de plus</b>Non : c'est le cadre qui permet à toutes les opinions d'exister.</li>
+      <li><b>Des citoyens neutres</b>Non : c'est l'État qui doit être neutre, pas les personnes.</li>
+    </ul>
+  </section>
+
+  <section class="panel mid" id="histoire">
+    <h2>Cinq dates</h2>
+    <ul class="dates">
+      <li><b>1789</b><span><strong>Déclaration des droits de l'homme et du citoyen</strong> : nul ne doit être inquiété pour ses opinions, même religieuses.</span></li>
+      <li><b>1801</b><span><strong>Concordat</strong> : accord entre Napoléon Bonaparte et le pape, l'État et l'Église restent liés.</span></li>
+      <li><b>1881-82</b><span><strong>Lois Ferry</strong> : l'école publique devient gratuite, obligatoire et laïque.</span></li>
+      <li><b>1886</b><span><strong>Loi Goblet</strong> : le personnel des écoles publiques est laïcisé.</span></li>
+      <li class="red"><b>1905</b><span><strong>Séparation des Églises et de l'État</strong> : la loi du 9 décembre.</span></li>
+    </ul>
+  </section>
+
+  <section class="panel mid right" id="beyrouth">
+    <h2>Depuis Beyrouth</h2>
+    <p class="lede">Au Liban, la vie civile se partage avec les communautés religieuses. En France, la loi de 1905 sépare les Églises et l'État.</p>
+    <p class="lede">Deux histoires, deux façons de tenir ensemble la liberté de conscience et la vie commune. Dans un lycée franco-libanais, on apprend à lire les deux, sans les classer.</p>
+  </section>
+
+  <section class="panel" id="fin">
+    <h2>Journée de la laïcité<br>9 décembre 2026</h2>
+    <p class="lede">120 ans de la loi du 9 décembre 1905. Un projet pour l'appel à projets AEFE 2026, « Valeurs de l'EFE et laïcité ».</p>
+    <p class="foot">Lycée franco-libanais de Verdun, Beyrouth</p>
+    <div class="plate wide"><img src="img/lycee_entete.jpg" alt="Réseau MLF, Lycée franco-libanais Verdun, République française, AEFE" width="420" height="73"></div>
+    <a class="cta" href="#top">Revenir au début</a>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>
+(() => {
+  if (!window.THREE || !THREE.EffectComposer || !THREE.UnrealBloomPass) return; // the gradient fallback stays
+  const canvas = document.getElementById('stage');
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' }); }
+  catch (e) { return; }
+  document.getElementById('fallback').hidden = true;
+
+  const FORCE_GLITCH = /glitchtest/.test(location.search);
+  const DEBUG = /debug/.test(location.search); let frameCount = 0;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const small = Math.min(innerWidth, innerHeight) < 700;
+  const DPR = Math.min(devicePixelRatio || 1, small ? 1.5 : 1.75);
+  renderer.setPixelRatio(DPR);
+  renderer.setClearColor(0x0a1736, 1);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a1736, 0.035);
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+
+  let seed = 7;
+  const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+  const gauss = () => { let u = 0; for (let i = 0; i < 4; i++) u += rnd(); return (u - 2) / 1.15; };
+
+  // ---------- three shapes for the same dust: a cedar of many convictions (A), a doorway of light behind the cards (B), "120" in blue-white-red (C) ----------
+  const N = small ? 26000 : 60000;
+  const A = new Float32Array(N * 3), B = new Float32Array(N * 3), C = new Float32Array(N * 3);
+  const cA = new Float32Array(N * 3), cB = new Float32Array(N * 3), cC = new Float32Array(N * 3);
+  const seedA = new Float32Array(N), gearA = new Float32Array(N * 3); // gear stays zero: nothing turns
+  const COL = { blue: [.25, .5, 1.4], sky: [.55, .75, 1.15], white: [1.3, 1.26, 1.12], red: [1.35, .2, .22], leaf: [.5, 1.05, .28], cedar: [.25, 1.0, .42], cream: [1.25, 1.1, .8] };
+  const setCol = (arr, i, name) => { const c = COL[name]; arr[i * 3] = c[0]; arr[i * 3 + 1] = c[1]; arr[i * 3 + 2] = c[2]; };
+  const pickW = (list) => { let u = rnd(), s = 0; for (const [n, w] of list) { s += w; if (u <= s) return n; } return list[0][0]; };
+
+  // A: five flat tiers of a cedar (same geometry as the poster), leaves of blue / white / red / green, regions of the same hue like convictions
+  const TIERS = [[205, 92, 140, 40, 4, 1], [165, 134, 232, 42, 6, 2], [206, 180, 304, 44, 8, 3], [122, 227, 346, 46, 9, 4], [182, 273, 322, 44, 8, 5]];
+  const prof = (u) => Math.pow(Math.max(0, 1 - (2 * u - 1) ** 2), 0.42);
+  const tierEdge = (T, u) => {
+    const [, y, , t, lift, sd] = T, ph = sd * 2.1, l = lift * Math.abs(2 * u - 1) ** 2.4;
+    return [y - l - t * 0.52 * prof(u) * (1 + 0.16 * Math.sin(6.283 * u * 3.6 + ph) + 0.09 * Math.sin(6.283 * u * 8.5 + ph * 1.7)),
+            y - l + t * 0.40 * prof(u) * (1 + 0.12 * Math.sin(6.283 * u * 7 + ph * 2.3))];
+  };
+  const wts = TIERS.map((T) => T[2] * T[3]), wsum = wts.reduce((a, b) => a + b, 0);
+  const hueNames = ['leaf', 'blue', 'white', 'leaf', 'red', 'sky', 'cedar'];
+  for (let i = 0; i < N; i++) {
+    const u0 = rnd(); let x, y, z, col;
+    if (u0 < 0.07) { // trunk
+      x = 163 + rnd() * 26 + (rnd() - 0.5) * 2; y = 100 + rnd() * 222; z = gauss() * 0.05; col = 'cedar';
+      x = (x - 165) / 62; y = (197 - y) / 62;
+    } else if (u0 < 0.985) {
+      let r = rnd() * wsum, ti = 0; while (ti < 4 && r > wts[ti]) { r -= wts[ti]; ti++; }
+      const T = TIERS[ti], u = rnd(), e = tierEdge(T, u), yy = e[0] + (e[1] - e[0]) * Math.pow(rnd(), 0.9), xx = T[0] - T[2] / 2 + T[2] * u;
+      const f = 0.5 + 0.5 * Math.sin(xx * 0.032 + Math.cos(yy * 0.05 + ti) * 2.2) * Math.cos(yy * 0.03 + xx * 0.015);
+      col = rnd() < 0.12 ? pickW([['leaf', .26], ['cedar', .12], ['blue', .18], ['sky', .10], ['white', .20], ['red', .10], ['blue', .04]]) : hueNames[Math.min(6, Math.floor(f * 7))];
+      if ((yy - e[0]) / Math.max(1e-6, e[1] - e[0]) > 0.62 && (col === 'white' || col === 'sky')) col = 'cedar'; // underside in shade
+      x = (xx - 165) / 62; y = (197 - yy) / 62; z = gauss() * 0.07 + (ti - 2) * 0.1;
+    } else { x = gauss() * 1.6; y = gauss() * 1.4; z = gauss() * 0.5; col = 'sky'; }
+    A.set([x, y, z], i * 3); setCol(cA, i, col);
+    seedA[i] = rnd();
+  }
+
+  // B: a tall doorway of light: tricolour jamb on the left, red-white-green on the right, a lintel, a pale panel, light spilled on the floor
+  for (let i = 0; i < N; i++) {
+    const u = rnd(); let x, y, z = gauss() * 0.03 - 1.4, col;
+    const hw = 2.3, hh = 2.1;
+    if (u < 0.16) { const lane = Math.floor(rnd() * 3); x = -hw - lane * 0.05 + gauss() * 0.004; y = -hh + rnd() * 2 * hh; col = ['blue', 'white', 'red'][lane]; }
+    else if (u < 0.32) { const lane = Math.floor(rnd() * 3); x = hw + lane * 0.05 + gauss() * 0.004; y = -hh + rnd() * 2 * hh; col = ['red', 'white', 'leaf'][lane]; }
+    else if (u < 0.38) { x = (rnd() - 0.5) * 2 * hw; y = hh + gauss() * 0.01; col = 'cream'; }
+    else if (u < 0.5) { x = (rnd() - 0.5) * 2 * hw; y = (rnd() - 0.5) * 2 * hh; col = rnd() < 0.5 ? 'cream' : 'white'; }
+    else if (u < 0.8) { const t = rnd(); y = -hh - t * 0.5; x = (rnd() - 0.5) * 2 * hw - t * 0.9; col = rnd() < 0.6 ? 'cream' : 'sky'; z += t * 1.4; }
+    else { x = gauss() * 2.4; y = gauss() * 1.9; z = gauss() * 0.6 - 1.6; col = 'sky'; }
+    B.set([x, y, z], i * 3); setCol(cB, i, col);
+  }
+
+  // C: "120" cut from the pixel font, one colour per digit (blue, white, red); filled once the font is loaded
+  for (let i = 0; i < N; i++) {
+    const a = rnd() * 6.283, r = 1.4 + gauss() * 0.3;
+    C.set([Math.cos(a) * r, Math.sin(a) * r * 0.5, gauss() * 0.1], i * 3); setCol(cC, i, 'white');
+  }
+  const buildC = () => {
+    const W = 1400, H = 460, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+    const x = cv.getContext('2d'); x.fillStyle = '#000'; x.font = '700 400px Silkscreen, "Courier New", monospace'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText('120', W / 2, H / 2 + 12);
+    const d = x.getImageData(0, 0, W, H).data, pts = []; let mn = W, mx = 0;
+    for (let yy = 0; yy < H; yy += 2) for (let xx = 0; xx < W; xx += 2) if (d[(yy * W + xx) * 4 + 3] > 128) { pts.push(xx, yy); if (xx < mn) mn = xx; if (xx > mx) mx = xx; }
+    if (pts.length < 200) return false;
+    const n = pts.length / 2, names = ['blue', 'white', 'red'];
+    for (let i = 0; i < N; i++) {
+      const k = Math.floor(rnd() * n), px = pts[k * 2] + (rnd() - 0.5) * 2, py = pts[k * 2 + 1] + (rnd() - 0.5) * 2;
+      C.set([(px - W / 2) / 215, (H / 2 - py) / 215, gauss() * 0.04], i * 3);
+      setCol(cC, i, names[Math.max(0, Math.min(2, Math.floor((px - mn) / (mx - mn + 1) * 3)))]);
+    }
+    return true;
+  };
+
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(A, 3));
+  geo.setAttribute('pB', new THREE.BufferAttribute(B, 3));
+  geo.setAttribute('pC', new THREE.BufferAttribute(C, 3));
+  geo.setAttribute('gear', new THREE.BufferAttribute(gearA, 3));
+  geo.setAttribute('seed', new THREE.BufferAttribute(seedA, 1));
+  geo.setAttribute('cA', new THREE.BufferAttribute(cA, 3));
+  geo.setAttribute('cB', new THREE.BufferAttribute(cB, 3));
+  geo.setAttribute('cC', new THREE.BufferAttribute(cC, 3));
+  document.fonts && document.fonts.load('700 400px Silkscreen', '120').then(() => { if (buildC()) { geo.attributes.pC.needsUpdate = true; geo.attributes.cC.needsUpdate = true; } });
+  const dustMat = new THREE.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    uniforms: { uGain: { value: 1 }, uMorph: { value: 0 }, uTime: { value: 0 }, uTurn: { value: 0 }, uPx: { value: DPR }, uB: { value: new THREE.Vector3(0, 0, 0) }, uBTilt: { value: 0 } },
+    vertexShader: `
+      attribute vec3 pB; attribute vec3 pC; attribute vec3 gear; attribute float seed; attribute vec3 cA; attribute vec3 cB; attribute vec3 cC; varying vec3 vCol;
+      uniform float uMorph, uTime, uTurn, uPx, uBTilt; uniform vec3 uB;
+      varying float vA; varying float vS;
+      vec3 drift(vec3 p, float s){ float t=uTime*.35+s*40.;
+        return vec3(sin(t+p.y*1.7), cos(t*.8+p.x*1.3), sin(t*.6+p.z*2.))*.025; }
+      void main(){
+        float ang = uTurn * gear.z;
+        float c=cos(ang), s=sin(ang);
+        vec3 b = vec3(c*pB.x - s*pB.y, s*pB.x + c*pB.y, pB.z) + vec3(gear.xy, 0.);
+        float cb=cos(uBTilt), sb=sin(uBTilt);
+        b = vec3(b.x, b.y*cb - b.z*sb, b.y*sb + b.z*cb) + uB;
+        float m = uMorph;
+        float seg = floor(min(m, 2.999));
+        float f = clamp((m - seg) * 1.6 - seed * .6, 0., 1.);
+        f = f*f*(3.-2.*f);
+        vec3 p0 = seg < .5 ? position : seg < 1.5 ? b : pC;
+        vec3 p1 = seg < .5 ? b : seg < 1.5 ? pC : position;
+        vec3 p = mix(p0, p1, f);
+        vec3 c0 = seg < .5 ? cA : seg < 1.5 ? cB : cC; vec3 c1 = seg < .5 ? cB : seg < 1.5 ? cC : cA; vCol = mix(c0, c1, f);
+        float swirl = sin(f*3.14159);
+        p += vec3(sin(seed*91.), cos(seed*53.), sin(seed*27.)) * swirl * .9;
+        p += drift(p, seed);
+        vec4 mv = modelViewMatrix * vec4(p, 1.);
+        float spark = step(.985, fract(seed*977. + uTime*.07));
+        gl_PointSize = (1.7 + seed*seed*2.8 + spark*3.) * uPx * (5.5 / -mv.z);
+        vA = .35 + seed*.5 + spark*.8; vS = spark;
+        gl_Position = projectionMatrix * mv;
+      }`,
+    fragmentShader: `
+      varying float vA; varying float vS; varying vec3 vCol; uniform float uGain;
+      void main(){ float d=length(gl_PointCoord-.5); float a=smoothstep(.5,0.,d);
+        vec3 white=vec3(1.4,1.38,1.3);
+        gl_FragColor=vec4(mix(vCol, white, vS*.45)*a*vA*1.7*uGain, a*vA); }`,
+  });
+  const dust = new THREE.Points(geo, dustMat);
+  dust.frustumCulled = false;
+  scene.add(dust);
+
+  // ---------- chrome ring ----------
+  const ringMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 }, uFade: { value: 1 } },
+    transparent: true,
+    vertexShader: `varying vec3 vN; varying vec3 vV;
+      void main(){ vec4 w = modelViewMatrix*vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-w.xyz); gl_Position = projectionMatrix*w; }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vV; uniform float uTime; uniform float uFade;
+      vec3 tri(float x){ x=fract(x); vec3 b=vec3(.2,.4,1.1), w=vec3(1.3,1.25,1.1), r=vec3(1.25,.2,.22); return x<.33? mix(b,w,smoothstep(.2,.33,x)) : x<.66? mix(w,r,smoothstep(.53,.66,x)) : mix(r,b,smoothstep(.9,1.,x)); }
+      void main(){ float nv = clamp(dot(normalize(vN), vV), 0., 1.);
+        float fr = pow(1.-nv, 2.2);
+        vec3 c = mix(vec3(.9,.8,.6)*.55, tri(nv*1.4 + uTime*.05)*1.1, .55);
+        c += fr*vec3(1.6,1.5,1.4);
+        c *= .55 + .45*smoothstep(-.4,.8,vN.y);
+        gl_FragColor = vec4(c*uFade, uFade); }`,
+  });
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.34, 0.06, 48, 160), ringMat);
+  scene.add(ring);
+  const ringIn = new THREE.Mesh(new THREE.TorusGeometry(0.19, 0.024, 32, 120), ringMat);
+  scene.add(ringIn);
+
+  // ---------- glass cards with drawn subjects ----------
+  const cardTex = (draw) => {
+    const c = document.createElement('canvas'); c.width = 512; c.height = 704;
+    const x = c.getContext('2d'); draw(x, c.width, c.height);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 4; return { t, c, draw };
+  };
+  const label = (x, W, H, l1, l2) => {
+    x.font = '700 52px Silkscreen, "Courier New", monospace'; x.fillStyle = '#f6edd9'; x.textAlign = 'left';
+    x.shadowColor = 'rgba(0,0,0,.6)'; x.shadowBlur = 18;
+    x.fillText(l1, 34, H - 92);
+    x.font = '700 34px Silkscreen, "Courier New", monospace'; x.fillStyle = '#e8d6b0';
+    x.fillText(l2, 34, H - 44); x.shadowBlur = 0;
+  };
+  let sd = 3; const rr = () => { sd = (sd * 1664525 + 1013904223) >>> 0; return sd / 4294967296; };
+  const drawConscience = (x, W, H) => { // a point of light and its rays: every direction is open
+    const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#16306e'); g.addColorStop(1, '#070f26');
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const cx = W / 2, cy = H * 0.42, r = 46; sd = 3;
+    const cols = ['42,79,160', '246,237,217', '201,58,59', '91,143,60', '143,176,222'];
+    x.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 420; i++) {
+      const a = rr() * Math.PI * 2, len = 80 + rr() * 190;
+      x.strokeStyle = `rgba(${cols[Math.floor(rr() * 5)]},${0.12 + rr() * 0.2})`;
+      x.lineWidth = 1 + rr() * 2;
+      x.beginPath(); x.moveTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); x.lineTo(cx + Math.cos(a) * (r + len), cy + Math.sin(a) * (r + len)); x.stroke();
+    }
+    const halo = x.createRadialGradient(cx, cy, 4, cx, cy, 170); halo.addColorStop(0, 'rgba(255,246,226,.9)'); halo.addColorStop(1, 'rgba(232,214,176,0)');
+    x.fillStyle = halo; x.beginPath(); x.arc(cx, cy, 170, 0, 7); x.fill();
+    x.globalCompositeOperation = 'source-over';
+    x.fillStyle = '#fff'; x.beginPath(); x.arc(cx, cy, 14, 0, 7); x.fill();
+    label(x, W, H, 'Liberté', 'de conscience');
+  };
+  const drawNeutral = (x, W, H) => { // a plain doorway of light: the State opens it for everyone, and takes no side
+    const g = x.createRadialGradient(W / 2, H * 0.4, 20, W / 2, H * 0.4, H * 0.7); g.addColorStop(0, '#1d3578'); g.addColorStop(1, '#070f26');
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const cx = W / 2, cy = H * 0.4;
+    const lg = x.createLinearGradient(0, cy - 150, 0, cy + 130); lg.addColorStop(0, '#fcf6e6'); lg.addColorStop(1, '#e8d6b0');
+    x.fillStyle = lg; x.fillRect(cx - 62, cy - 150, 124, 280);
+    const dots = ['#2a4fa0', '#f6edd9', '#c93a3b', '#5b8f3c'];
+    for (const s of [-1, 1]) for (let k = 0; k < 8; k++) {
+      x.fillStyle = dots[(k + (s > 0 ? 1 : 0)) % 4]; x.beginPath(); x.arc(cx + s * 150, cy - 130 + k * 36, 11, 0, 7); x.fill();
+    }
+    label(x, W, H, 'Neutralité', "de l'État");
+  };
+  const drawEquality = (x, W, H) => { // the same dot in every colour, repeated, and an equal sign
+    x.fillStyle = '#070f26'; x.fillRect(0, 0, W, H);
+    const cx = W / 2, cy = H * 0.38, dots = ['rgba(42,79,160,.75)', 'rgba(246,237,217,.6)', 'rgba(201,58,59,.7)', 'rgba(91,143,60,.75)'];
+    let n = 0;
+    for (let gy = 20; gy < H - 150; gy += 26) for (let gx = 20; gx < W; gx += 26) {
+      x.fillStyle = dots[(n++ * 7 + Math.floor(gy / 26)) % 4]; x.beginPath(); x.arc(gx, gy, 4, 0, 7); x.fill();
+    }
+    x.fillStyle = '#f6edd9'; x.fillRect(cx - 120, cy - 50, 240, 30); x.fillRect(cx - 120, cy + 20, 240, 30);
+    label(x, W, H, 'Égalité', 'des droits');
+  };
+  const textures = [cardTex(drawConscience), cardTex(drawNeutral), cardTex(drawEquality)];
+  document.fonts && document.fonts.ready.then(() => textures.forEach((o) => { o.draw(o.c.getContext('2d'), o.c.width, o.c.height); o.t.needsUpdate = true; }));
+
+  const roundRect = (w, h, r) => {
+    const s = new THREE.Shape();
+    s.moveTo(-w / 2 + r, -h / 2); s.lineTo(w / 2 - r, -h / 2); s.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r);
+    s.lineTo(w / 2, h / 2 - r); s.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2); s.lineTo(-w / 2 + r, h / 2);
+    s.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r); s.lineTo(-w / 2, -h / 2 + r); s.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2);
+    const g = new THREE.ShapeGeometry(s, 10);
+    const p = g.attributes.position, uv = g.attributes.uv;
+    for (let i = 0; i < p.count; i++) uv.setXY(i, p.getX(i) / w + 0.5, p.getY(i) / h + 0.5);
+    return g;
+  };
+  const cardGeo = roundRect(1.28, 1.76, 0.1);
+  const cards = textures.map((o) => {
+    const m = new THREE.ShaderMaterial({
+      transparent: true, depthWrite: false, side: THREE.DoubleSide,
+      uniforms: { map: { value: o.t }, uTime: { value: 0 }, uFade: { value: 0 }, uGlitch: { value: 0 } },
+      vertexShader: `varying vec2 vU; varying vec3 vN; varying vec3 vV;
+        void main(){ vU=uv; vec4 w=modelViewMatrix*vec4(position,1.); vN=normalize(normalMatrix*normal); vV=normalize(-w.xyz); gl_Position=projectionMatrix*w; }`,
+      fragmentShader: `uniform sampler2D map; uniform float uTime, uFade; varying vec2 vU; varying vec3 vN; varying vec3 vV;
+        vec3 tri(float x){ x=fract(x); vec3 b=vec3(.2,.4,1.1), w=vec3(1.3,1.25,1.1), r=vec3(1.25,.2,.22); return x<.33? mix(b,w,smoothstep(.2,.33,x)) : x<.66? mix(w,r,smoothstep(.53,.66,x)) : mix(r,b,smoothstep(.9,1.,x)); }
+        void main(){
+          vec2 e = min(vU, 1.-vU); float edge = 1.-smoothstep(0.,.035,min(e.x,e.y*1.37));
+          float nv = abs(dot(normalize(vN), vV));
+          vec2 warp = vec2(sin(vU.y*14.+uTime*.6), cos(vU.x*11.-uTime*.5))*.004*(1.-nv+.3);
+          vec3 img;
+          img.r = texture2D(map, vU+warp*1.6).r; img.g = texture2D(map, vU+warp).g; img.b = texture2D(map, vU+warp*.4).b;
+          vec3 c = img*.92 + mix(vec3(.9), tri(nv*1.7+vU.y*.6), .45)*edge*.55 + pow(1.-nv,3.)*.3;
+          float sheen = smoothstep(.02,0.,abs(vU.x - vU.y*.6 - fract(uTime*.07)*2. + .5))*.25;
+          c += sheen;
+          gl_FragColor = vec4(c*uFade, uFade*(.9+edge*.1)); }`,
+    });
+    const mesh = new THREE.Mesh(cardGeo, m);
+    scene.add(mesh);
+    return mesh;
+  });
+
+  // ---------- post: bloom, then a scroll-driven glitch ----------
+  const composer = new THREE.EffectComposer(renderer);
+  composer.addPass(new THREE.RenderPass(scene, camera));
+  const bloom = new THREE.UnrealBloomPass(new THREE.Vector2(256, 256), 0.85, 0.55, 0.22);
+  composer.addPass(bloom);
+  const glitch = new THREE.ShaderPass({
+    uniforms: { tDiffuse: { value: null }, uAmt: { value: 0 }, uTime: { value: 0 }, uRes: { value: new THREE.Vector2(1, 1) } },
+    vertexShader: 'varying vec2 vU; void main(){ vU=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }',
+    fragmentShader: `uniform sampler2D tDiffuse; uniform float uAmt, uTime; uniform vec2 uRes; varying vec2 vU;
+      float h(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453); }
+      void main(){
+        vec2 uv = vU; float a = uAmt;
+        float t = floor(uTime*18.);
+        float row = floor(uv.y*mix(18.,60.,h(vec2(t,1.))));
+        float on = step(1.-a*.9, h(vec2(row, t)));
+        uv.x += (h(vec2(row, t+3.))-.5)*.25*a*on;
+        float px = mix(1., 28., a*a*on);
+        uv = (floor(uv*uRes/px)+.5)*px/uRes;
+        vec3 c;
+        c.r = texture2D(tDiffuse, uv+vec2(.012*a,0.)).r;
+        c.g = texture2D(tDiffuse, uv).g;
+        c.b = texture2D(tDiffuse, uv-vec2(.012*a,0.)).b;
+        vec3 sm = c;
+        for (int i=1;i<6;i++){ vec3 s = texture2D(tDiffuse, uv - vec2(float(i)*.012*a*on, 0.)).rgb; sm = max(sm, s*(1.-float(i)*.12)); }
+        c = mix(c, sm, on*a);
+        gl_FragColor = vec4(c, 1.); }`,
+  });
+  composer.addPass(glitch);
+
+  // ---------- scroll: one smoothed progress drives everything ----------
+  let target = 0, prog = 0, vel = 0;
+  const panels = [...document.querySelectorAll('.panel')];
+  const GO = DEBUG && /go=([0-9])/.exec(location.search); if (GO) panels.forEach((el, i) => { if (i !== +GO[1]) el.style.display = 'none'; });
+  const readScroll = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const marks = panels.map((el, i) => i === panels.length - 1 ? max : Math.min(max, el.offsetTop));
+    const y = scrollY; let s = 0;
+    for (let i = 0; i < marks.length - 1; i++) {
+      if (y >= marks[i]) s = i + Math.min(1, (y - marks[i]) / Math.max(1, marks[i + 1] - marks[i]));
+    }
+    target = s / (marks.length - 1);
+  };
+  addEventListener('scroll', readScroll, { passive: true });
+  let mx = 0, my = 0;
+  addEventListener('pointermove', (e) => { mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; }, { passive: true });
+
+  const resize = () => {
+    const w = innerWidth, h = innerHeight;
+    renderer.setSize(w, h, false); composer.setSize(w, h);
+    bloom.setSize(w * DPR * 0.5, h * DPR * 0.5);
+    glitch.uniforms.uRes.value.set(w * DPR, h * DPR);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+    readScroll();
+  };
+  addEventListener('resize', resize); resize();
+
+  const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const bump = (c, w, x) => Math.max(0, 1 - Math.abs(x - c) / w);
+
+  let last = performance.now(), time = 0;
+  const frame = (now) => {
+    const dt = Math.min(0.05, (now - last) / 1000); last = now; time += reduce ? 0 : dt;
+    const prev = prog;
+    const dtS = Math.min(0.5, (now - (frame.prev || now)) / 1000); frame.prev = now;
+    prog += (target - prog) * (1 - Math.exp(-Math.max(dt, dtS) * 6));
+    if (DEBUG) prog = target;
+    const FP = DEBUG && /[?&]p=([0-9.]+)/.exec(location.search); if (FP) prog = target = +FP[1];
+    vel = lerp(vel, Math.abs(prog - prev) / Math.max(dt, 1e-3), 1 - Math.exp(-dt * 10));
+    if (FORCE_GLITCH || DEBUG) document.documentElement.dataset.stage = prog.toFixed(3) + ' ' + target.toFixed(3) + ' ' + (++frameCount);
+    const p = prog, portrait = innerHeight > innerWidth;
+
+    // six panels, p = 0, .2, .4, .6, .8, 1: cedar -> doorway (cards) -> 120 -> back to the cedar
+    const morph = ss(0.1, 0.2, p) + ss(0.3, 0.4, p) + ss(0.72, 0.92, p);
+    dustMat.uniforms.uMorph.value = morph;
+    dustMat.uniforms.uGain.value = 1 - 0.3 * Math.min(1, (1 - ss(0.1, 0.2, p)) + ss(0.72, 0.92, p));
+    dustMat.uniforms.uB.value.set(portrait ? 0 : 0.9, portrait ? 0.2 : 0, 0);
+    dustMat.uniforms.uTime.value = time;
+    // the balance sits to the left on desktop (text on the right), higher on a phone
+    const bal = ss(0.3, 0.4, p) * (1 - ss(0.72, 0.92, p));
+    dust.position.set(portrait ? 0 : -0.6 * bal, portrait ? 2.5 * bal + 0.9 * (1 - bal) + 0.9 * bump(0.2, 0.12, p) : 1.55 * bal + 0.1 * (1 - bal), 0);
+    dust.scale.setScalar(portrait ? 0.5 : 1);
+
+    const ringOn = 1 - ss(0.05, 0.14, p) + ss(0.88, 0.98, p);
+    ringMat.uniforms.uFade.value = Math.min(1, ringOn);
+    ringMat.uniforms.uTime.value = time;
+    ring.position.set(portrait ? 0 : -2.3, portrait ? 2.6 : 1.7, 0.05); ringIn.position.copy(ring.position);
+    ring.rotation.set(0.25 + Math.sin(time * 0.4) * 0.15, time * 0.5, 0);
+    ringIn.rotation.set(-0.4, -time * 0.8, 0.3);
+    ring.visible = ringIn.visible = ringOn > 0.01;
+
+    // cards fly in for the second panel
+    const cardIn = ss(0.1, 0.19, p) * (1 - ss(0.28, 0.35, p));
+    cards.forEach((c, i) => {
+      const o = i - 1;
+      const sp = portrait ? [o * 0.45, o * -0.8 + 2.05, -0.6 - Math.abs(o) * 0.4] : [o * 1.55 + 0.9, o * 0.12, -Math.abs(o) * 0.55];
+      const fly = 1 - cardIn;
+      c.position.set(sp[0] + fly * o * 2.5, sp[1] - fly * 2.5, sp[2] - fly * 3);
+      c.rotation.set(-0.12 + fly * 0.6 + my * 0.15, -o * 0.38 + mx * 0.3 + Math.sin(time * 0.5 + i) * 0.04, o * 0.04);
+      c.scale.setScalar(portrait ? 0.6 : 1);
+      c.material.uniforms.uFade.value = cardIn;
+      c.material.uniforms.uTime.value = time + i * 3;
+      c.visible = cardIn > 0.01;
+    });
+
+    const dist = portrait ? 8.6 : 6.4;
+    camera.position.set(mx * 0.6, 0.2 - my * 0.4, dist);
+    camera.lookAt(0, 0.1, 0);
+    dust.rotation.y = Math.sin(time * 0.15) * 0.22;
+
+    const edges = bump(0.1, 0.05, p) + bump(0.3, 0.05, p) + bump(0.5, 0.05, p) + bump(0.7, 0.05, p) + bump(0.9, 0.05, p);
+    glitch.uniforms.uAmt.value = reduce ? 0 : Math.min(1, edges * (0.25 + Math.min(vel * 6, 0.9)));
+    if (FORCE_GLITCH) glitch.uniforms.uAmt.value = 0.7;
+    glitch.uniforms.uTime.value = time;
+
+    composer.render();
+    requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
